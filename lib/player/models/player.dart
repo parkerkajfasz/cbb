@@ -16,15 +16,42 @@ abstract class Player {
         return Center();
     }
   }
-  int getHeight();
-  int setHeight();
-  int getWeight();
-  int setWeight(); 
+
+  void attributeBuilder();
 
   // void setFirstName(String firstName);
   // void setLastName(String lastName);
   // void setPosition(String position);
-  // void setTeam(Team team); // void setConference(Conference conference) // void setHighSchoolRankingStuff
+  // void setTeam(Team team); 
+  // void setConference(Conference conference) 
+  int getHeight(); 
+  int setHeight();
+  int getWeight();
+  int setWeight();
+  double getFinishingAttribute();
+  double setFinishingAttribute();
+  double getMidRangeAttribute();
+  double setMidRangeAttribute();
+  double getThreeAttribute();
+  double setThreeAttribute();
+  double getBallHandlingAttribute();
+  double setBallHandlingAttribute();
+  double getPassingAttribute();
+  double setPassingAttribute();
+  double getPerimeterDefenseAttribute();
+  double setPerimeterDefenseAttribute();
+  double getTeamDefenseAttribute();
+  double setTeamDefenseAttribute();
+  double getInsideDefenseAttribute();
+  double setInsideDefenseAttribute();
+  double getStealAttribute();
+  double setStealAttribute();
+  double getBlockAttribute();
+  double setBlockAttribute();
+  // double getFoulDrawingAttribute();
+  // double setFoulDrawingAttribute();
+
+
   // void setFinishingAttribute(double finishingAttribute);
   // void setFinishingTendency(double finishingTendency);
   // void setMidRangeAttribute(double midRangeAttribute);
