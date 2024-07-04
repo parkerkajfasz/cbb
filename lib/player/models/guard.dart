@@ -55,27 +55,51 @@ class Guard implements Player{
   double getStealAttribute() => _stealAttribute;
 
   @override
-  int setHeight() => 0;
+  int setHeight() {
+    return RandomChoice.randomChoice([81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68], [10, 30, 80, 190, 290, 320, 280, 240, 150, 140, 50, 50, 10, 10]);
+  }
   @override
-  int setWeight() => 0;
+  int setWeight() {
+    return RandomChoice.randomChoice([240, 230, 220, 210, 200, 190, 180, 170, 160, 150], [5, 10, 40, 190, 260, 380, 500, 330, 150, 20]);
+  }
   @override
-  double setFinishingAttribute() => 0;
+  double setFinishingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setMidRangeAttribute() => 0;
+  double setMidRangeAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setThreeAttribute() => 0;
+  double setThreeAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setBallHandlingAttribute() => 0;
+  double setBallHandlingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setPassingAttribute() => 0;
+  double setPassingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setPerimeterDefenseAttribute() => 0;
+  double setPerimeterDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setTeamDefenseAttribute() => 0;
+  double setTeamDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setInsideDefenseAttribute() => 0;
+  double setInsideDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setBlockAttribute() => 0;
+  double setBlockAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  } 
   @override
-  double setStealAttribute() => 0;
+  double setStealAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
 }

@@ -1,5 +1,6 @@
 // ignore_for_file: unused_field
 import 'package:cbb_v1/player/models/player.dart';
+import 'package:cbb_v1/util/random_choice.dart';
 
 class Forward implements Player{
   String? _firstName;
@@ -54,27 +55,51 @@ class Forward implements Player{
   double getStealAttribute() => _stealAttribute;
 
   @override
-  int setHeight() => 0;
+  int setHeight() {
+    return RandomChoice.randomChoice([84, 83, 82, 81, 80, 79, 78, 77, 76, 75], [20, 40, 120, 200, 240, 250, 230, 40, 10, 5]);
+  }
   @override
-  int setWeight() => 0;
+  int setWeight() {
+    return RandomChoice.randomChoice([280, 270, 260, 250, 240, 230, 220, 210, 200, 190, 180, 170], [5, 5, 10, 30, 80, 130, 220, 235, 165, 105, 50, 10]);
+  }
   @override
-  double setFinishingAttribute() => 0;
+  double setFinishingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setMidRangeAttribute() => 0;
+  double setMidRangeAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setThreeAttribute() => 0;
+  double setThreeAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setBallHandlingAttribute() => 0;
+  double setBallHandlingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setPassingAttribute() => 0;
+  double setPassingAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setPerimeterDefenseAttribute() => 0;
+  double setPerimeterDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setTeamDefenseAttribute() => 0;
+  double setTeamDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setInsideDefenseAttribute() => 0;
+  double setInsideDefenseAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
   @override
-  double setBlockAttribute() => 0;
+  double setBlockAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  } 
   @override
-  double setStealAttribute() => 0;
+  double setStealAttribute() {
+    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
 }
