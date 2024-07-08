@@ -1,105 +1,118 @@
 // ignore_for_file: unused_field
+import 'dart:math';
+
 import 'package:cbb_v1/player/models/player.dart';
+import 'package:cbb_v1/team/models/team.dart';
+import 'package:cbb_v1/util/constants.dart';
 import 'package:cbb_v1/util/random_choice.dart';
 
 class Forward implements Player{
-  String? _firstName;
-  String? _lastName;
-  late int _height;
-  late int _weight; // add team, conference, and high school ranking
-  late double _finishingAttribute;
-  late double _midRangeAttribute;
-  late double _threeAttribute;
-  late double _ballHandlingAttribute;
-  late double _passingAttribute;
-  late double _perimeterDefenseAttribute;
-  late double _teamDefenseAttribute;
-  late double _insideDefenseAttribute;
-  late double _blockAttribute;
-  late double _stealAttribute;
+  static Random random = Random();
+  @override
+  late Team team;
+  @override
+  late String firstName;
+  @override
+  late String lastName;
+  @override
+  late String position;
+  @override
+  late int height;
+  @override
+  late int weight; // add team, conference, and high school ranking
+  @override
+  late double finishingAttribute;
+  @override
+  late double midRangeAttribute;
+  @override
+  late double threeAttribute;
+  @override
+  late double ballHandlingAttribute;
+  @override
+  late double passingAttribute;
+  @override
+  late double perimeterDefenseAttribute;
+  @override
+  late double teamDefenseAttribute;
+  @override
+  late double insideDefenseAttribute;
+  @override
+  late double blockAttribute;
+  @override
+  late double stealAttribute;
 
   Forward() {
-    _height = setHeight();
-    _weight = setWeight();
+    playerBuilder();
     attributeBuilder();
   }
 
   @override
+  void playerBuilder() {
+    initFirstName();
+    initLastName();
+    position = "F";
+    initHeight();
+    initWeight();
+  }
+
+  @override
   void attributeBuilder() {
-    _finishingAttribute = setFinishingAttribute();
-  }
-
-  @override
-  int getHeight() => _height;
-  @override
-  int getWeight() => _weight;
-  @override
-  double getFinishingAttribute() => _finishingAttribute;
-  @override
-  double getMidRangeAttribute() => _midRangeAttribute;
-  @override
-  double getThreeAttribute() => _threeAttribute;
-  @override
-  double getBallHandlingAttribute() => _ballHandlingAttribute;
-  @override
-  double getPassingAttribute() => _passingAttribute;
-  @override
-  double getPerimeterDefenseAttribute() => _perimeterDefenseAttribute;
-  @override
-  double getTeamDefenseAttribute() => _teamDefenseAttribute;
-  @override
-  double getInsideDefenseAttribute() => _insideDefenseAttribute;
-  @override
-  double getBlockAttribute() => _blockAttribute;
-  @override
-  double getStealAttribute() => _stealAttribute;
-
-  @override
-  int setHeight() {
-    return RandomChoice.randomChoice([84, 83, 82, 81, 80, 79, 78, 77, 76, 75], [20, 40, 120, 200, 240, 250, 230, 40, 10, 5]);
+    initFinishingAttribute();
   }
   @override
-  int setWeight() {
-    return RandomChoice.randomChoice([280, 270, 260, 250, 240, 230, 220, 210, 200, 190, 180, 170], [5, 5, 10, 30, 80, 130, 220, 235, 165, 105, 50, 10]);
+  void initFirstName() {
+    firstName = Constants.FIRST_NAMES[random.nextInt(100)];
   }
   @override
-  double setFinishingAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initLastName() {
+    lastName = Constants.LAST_NAMES[random.nextInt(100)];
   }
   @override
-  double setMidRangeAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initHeight() {
+    height = RandomChoice.randomChoice([84, 83, 82, 81, 80, 79, 78, 77, 76, 75], [20, 40, 120, 200, 240, 250, 230, 40, 10, 5]);
   }
   @override
-  double setThreeAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initWeight() {
+    weight = RandomChoice.randomChoice([280, 270, 260, 250, 240, 230, 220, 210, 200, 190, 180, 170], [5, 5, 10, 30, 80, 130, 220, 235, 165, 105, 50, 10]);
   }
   @override
-  double setBallHandlingAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initFinishingAttribute() {
+    finishingAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
   @override
-  double setPassingAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initMidRangeAttribute() {
+    midRangeAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
   @override
-  double setPerimeterDefenseAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initThreeAttribute() {
+    threeAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
   @override
-  double setTeamDefenseAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initBallHandlingAttribute() {
+    ballHandlingAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
   @override
-  double setInsideDefenseAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initPassingAttribute() {
+    passingAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
   @override
-  double setBlockAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initPerimeterDefenseAttribute() {
+    perimeterDefenseAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
+  @override
+  void initTeamDefenseAttribute() {
+    teamDefenseAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
+  @override
+  void initInsideDefenseAttribute() {
+    insideDefenseAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  }
+  @override
+  void initBlockAttribute() {
+    blockAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   } 
   @override
-  double setStealAttribute() {
-    return RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
+  void initStealAttribute() {
+    stealAttribute = RandomChoice.randomChoice([50, 75, 100], [1, 1, 1]);
   }
 }

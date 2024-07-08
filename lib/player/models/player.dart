@@ -2,6 +2,7 @@
 import 'package:cbb_v1/player/models/center.dart';
 import 'package:cbb_v1/player/models/forward.dart';
 import 'package:cbb_v1/player/models/guard.dart';
+import 'package:cbb_v1/team/models/team.dart';
 
 enum PlayerType { guard, forward, center }
 
@@ -17,52 +18,39 @@ abstract class Player {
     }
   }
 
-  void attributeBuilder();
+  late Team team;
+  late String firstName;
+  late String lastName;
+  late String position;
+  late int height;
+  late int weight;
+  late double finishingAttribute;
+  late double midRangeAttribute;
+  late double threeAttribute;
+  late double ballHandlingAttribute;
+  late double passingAttribute;
+  late double perimeterDefenseAttribute;
+  late double teamDefenseAttribute;
+  late double insideDefenseAttribute;
+  late double blockAttribute;
+  late double stealAttribute;
 
-  // void setFirstName(String firstName);
-  // void setLastName(String lastName);
-  // void setPosition(String position);
-  // void setTeam(Team team); 
-  // void setConference(Conference conference) 
-  int getHeight(); 
-  int setHeight();
-  int getWeight();
-  int setWeight();
-  double getFinishingAttribute();
-  double setFinishingAttribute();
-  double getMidRangeAttribute();
-  double setMidRangeAttribute();
-  double getThreeAttribute();
-  double setThreeAttribute();
-  double getBallHandlingAttribute();
-  double setBallHandlingAttribute();
-  double getPassingAttribute();
-  double setPassingAttribute();
-  double getPerimeterDefenseAttribute();
-  double setPerimeterDefenseAttribute();
-  double getTeamDefenseAttribute();
-  double setTeamDefenseAttribute();
-  double getInsideDefenseAttribute();
-  double setInsideDefenseAttribute();
-  double getStealAttribute();
-  double setStealAttribute();
-  double getBlockAttribute();
-  double setBlockAttribute();
+  void playerBuilder();
+  void attributeBuilder();
+  void initFirstName();
+  void initLastName();
+  void initHeight();
+  void initWeight();
+  void initFinishingAttribute();
+  void initMidRangeAttribute();
+  void initThreeAttribute();
+  void initBallHandlingAttribute();
+  void initPassingAttribute();
+  void initPerimeterDefenseAttribute();
+  void initTeamDefenseAttribute();
+  void initInsideDefenseAttribute();
+  void initStealAttribute();
+  void initBlockAttribute();
   // double getFoulDrawingAttribute();
   // double setFoulDrawingAttribute();
-
-
-  // void setFinishingAttribute(double finishingAttribute);
-  // void setFinishingTendency(double finishingTendency);
-  // void setMidRangeAttribute(double midRangeAttribute);
-  // void setMidRangeTendency(double midRangeTendency);
-  // void setThreeAttribute(double threeAttribute);
-  // void setThreeTendency(double threeTendency);
-  // void setBallHandlingAttribute(double ballHandlingAttribute);
-  // void setPassingAttribute(double passingAttribute);
-  // void setPerimeterDefenseAttribute(double perimeterDefenseAttribute);
-  // void setTeamDefenseAttribute(double teamDefenseAttribute);
-  // void setInsideDefenseAttribute(double insideDefenseAttribute);
-  // void stealAttribute(double stealAttribute);
-  // void blockAttribute(double blockAttribute);
 }
