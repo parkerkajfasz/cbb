@@ -17,15 +17,12 @@ class Coach {
     initExperience();
   }
 
-  @override
   void initFirstName() {
     firstName = Constants.FIRST_NAMES[random.nextInt(100)];
   }
-  @override
   void initLastName() {
     lastName = Constants.LAST_NAMES[random.nextInt(100)];
   }
-
   void initExperience() {
     experience = random.nextInt(41);
   }
